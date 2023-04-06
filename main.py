@@ -220,7 +220,7 @@ async def upload(bot: Client, m: Message):
         
          
     
-# @bot.on_message(filters.command(["link"])& 
+# @bot.on_message(filters.command(["link"]))
 # async def account_login(bot: Client, m: Message):
 #     editable = await m.reply_text('Send **Name&link** to download')
 
@@ -230,7 +230,7 @@ async def upload(bot: Client, m: Message):
 #     name = raw_file.split('&')[0]
 #     url = raw_file.split('&')[1]
 
-@bot.on_message(filters.command(["pyro"])& 
+@bot.on_message(filters.command(["pyro"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text("Send **ID & Password** in this manner otherwise bot will not respond.\n\nSend like this:-  **ID*Password**")
     url = "https://elearn.crwilladmin.com/api/v1/login-other"
