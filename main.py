@@ -53,9 +53,9 @@ from dotenv import load_dotenv
 load_dotenv()
 os.makedirs("./downloads", exist_ok=True)
 #put dealis here directly is case of any issue
-#API_ID = 14560088
-#API_HASH = "74a2665339484da3eaaed5f4fe16da79"
-#BOT_TOKEN = "5524381543:AAH-s7TDhvA_Ng2k9U5z9pvgiRPy5ChNve8"
+#API_ID = 10577960
+#API_HASH = "80fd047285f4e94ca80311928b6bb5da"
+#BOT_TOKEN = "5937052458:AAEJgRyvr6Z4fQyIKr-UepaoXNDmn-C7RjY"
 #NAME = "BlackOuT"
 #API_ID = os.getenv('API_ID')
 #API_HASH = os.getenv('API_HASH')
@@ -67,7 +67,7 @@ bot = Client(
     api_hash=os.environ.get("API_HASH")
 )
 
-@bot.on_message(filters.command(["start"])& ~filters.edited)
+@bot.on_message(filters.command(["start"])& 
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text("Hello im txt file downloader\nPress /pyro to download links listed in a txt file in the format **Name:link**\n\nBot made by BlackOuT")
 
@@ -84,7 +84,7 @@ async def restart_handler(_, m):
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
-@bot.on_message(filters.command(["link"])& ~filters.edited)
+@bot.on_message(filters.command(["link"])& 
 async def upload(bot: Client, m: Message):
     editable = await m.reply_text('Send link in **Name&link** format to download')
     input9: Message = await bot.listen(editable.chat.id)
@@ -220,7 +220,7 @@ async def upload(bot: Client, m: Message):
         
          
     
-# @bot.on_message(filters.command(["link"])& ~filters.edited)
+# @bot.on_message(filters.command(["link"])& 
 # async def account_login(bot: Client, m: Message):
 #     editable = await m.reply_text('Send **Name&link** to download')
 
@@ -230,7 +230,7 @@ async def upload(bot: Client, m: Message):
 #     name = raw_file.split('&')[0]
 #     url = raw_file.split('&')[1]
 
-@bot.on_message(filters.command(["pyro"])& ~filters.edited)
+@bot.on_message(filters.command(["pyro"])& 
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text("Send **ID & Password** in this manner otherwise bot will not respond.\n\nSend like this:-  **ID*Password**")
     url = "https://elearn.crwilladmin.com/api/v1/login-other"
@@ -464,7 +464,7 @@ async def account_login(bot: Client, m: Message):
     await m.reply_text("Done")  
     
     
-@bot.on_message(filters.command(["top"])& ~filters.edited)
+@bot.on_message(filters.command(["top"])& 
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text(f"**Hi im Topranker dl**")
     input: Message = await bot.listen(editable.chat.id)
