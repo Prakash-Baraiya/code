@@ -25,14 +25,14 @@
 import requests
 import json
 import subprocess
-from pyrogram import Client,filters
+from pyrogram import Client
 from pyrogram.types.messages_and_media import message
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors import FloodWait
 from pyromod import listen
 from pyrogram.types import Message
 import pyrogram
-from pyrogram import Client, filters
+from pyrogram import Client, 
 import tgcrypto
 from p_bar import progress_bar
 
